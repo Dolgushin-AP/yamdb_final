@@ -3,13 +3,14 @@ from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions, viewsets
 
-from reviews.models import Category, Comment, Genre, Review, Title
 from .filters import TitleFilter
 from .mixins import CreateDestroyListViewSet
 from .permissions import IsAdminModerAuthorOrReadOnly, ListAllModerAdminOnly
 from .serializers import AddTitleSerializer, CategorySerializer
 from .serializers import CommentSerializer, GenreSerializer, ReviewSerializer
 from .serializers import TitleSerializer
+from reviews.models import Category, Comment, Genre, Review, Title
+
 
 class CategoryViewSet(CreateDestroyListViewSet):
     """Вьюсет для модели категорий."""
