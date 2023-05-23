@@ -3,9 +3,11 @@ from rest_framework.routers import SimpleRouter
 
 from .views import CategoryViewSet, CommentViewSet, GenreViewSet
 from .views import ReviewViewSet, TitleViewSet
+
 from users.views import get_jwt_token
 from users.views import UsersViewSet
 from users.views import user_register
+
 
 router_v1 = SimpleRouter()
 

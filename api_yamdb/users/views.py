@@ -12,7 +12,9 @@ from rest_framework_simplejwt.tokens import AccessToken
 from .models import User
 from .serializers import RegisterUserSerializer, TokenSerializer
 from .serializers import UserSerializer, UserEditSerializer
+
 from api.permissions import IsAdmin
+
 
 def send_mail_with_code(user):
     """Отправка письма с кодом подтверждения."""
