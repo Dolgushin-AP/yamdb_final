@@ -4,7 +4,6 @@ from django.core.management.base import BaseCommand
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 
-
 csv_file = {
     'static/data/category.csv': Category,
     'static/data/genre.csv': Genre,

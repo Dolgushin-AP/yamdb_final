@@ -11,7 +11,6 @@ from .serializers import AddTitleSerializer, CategorySerializer
 from .serializers import CommentSerializer, GenreSerializer, ReviewSerializer
 from .serializers import TitleSerializer
 
-
 class CategoryViewSet(CreateDestroyListViewSet):
     """Вьюсет для модели категорий."""
     queryset = Category.objects.order_by('id')
