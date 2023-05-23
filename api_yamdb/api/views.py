@@ -5,11 +5,11 @@ from rest_framework import permissions, viewsets
 
 from .filters import TitleFilter
 from .mixins import CreateDestroyListViewSet
+from reviews.models import Category, Comment, Genre, Review, Title
 from .permissions import IsAdminModerAuthorOrReadOnly, ListAllModerAdminOnly
 from .serializers import AddTitleSerializer, CategorySerializer
 from .serializers import CommentSerializer, GenreSerializer, ReviewSerializer
 from .serializers import TitleSerializer
-from reviews.models import Category, Comment, Genre, Review, Title
 
 
 class CategoryViewSet(CreateDestroyListViewSet):
