@@ -2,7 +2,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
-from reviews.models import Category, Genre, Title, Review, Comment
+from reviews.models import Category, Comment, Genre, Title, Review
 
 
 class CurrentTitleDefault:
@@ -40,7 +40,7 @@ class TitleSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'year', 'description',
                   'genre', 'category', 'rating',)
 
-        
+
 class AddTitleSerializer(serializers.ModelSerializer):
     genre = serializers.SlugRelatedField(
         queryset=Genre.objects.all(),
@@ -53,7 +53,7 @@ class AddTitleSerializer(serializers.ModelSerializer):
         required=False,
         slug_field='slug'
     )
-    
+
     class Meta:
         model = Title
         fields = ('id', 'name', 'year', 'description',

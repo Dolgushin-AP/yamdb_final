@@ -1,7 +1,7 @@
 from rest_framework.permissions import SAFE_METHODS, BasePermission
 
 
-class ListAll_ModerAdminOnly(BasePermission):
+class ListAllModerAdminOnly(BasePermission):
     """
     Получение списка доступно всем пользователям.
     Модерирование доступно только администратору.

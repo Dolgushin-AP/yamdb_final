@@ -1,6 +1,6 @@
 from rest_framework import filters, mixins, viewsets
 
-from .permissions import ListAll_ModerAdminOnly
+from .permissions import ListAllModerAdminOnly
 
 
 class CreateDestroyListViewSet(
@@ -10,7 +10,7 @@ class CreateDestroyListViewSet(
     viewsets.GenericViewSet,
 ):
     """Миксовый дженерик для операций вьюсетов категорий и жанров."""
-    permission_classes = (ListAll_ModerAdminOnly,)
+    permission_classes = (ListAllModerAdminOnly,)
     filter_backends = (filters.SearchFilter,)
     search_fields = ('name',)
     lookup_field = 'slug'

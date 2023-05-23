@@ -2,13 +2,13 @@ from django.urls import include, path
 from rest_framework.routers import SimpleRouter
 
 from users.views import user_register, get_jwt_token
-from .views import (CategoryViewSet,
-                    GenreViewSet,
-                    TitleViewSet,
-                    CommentViewSet,
-                    ReviewViewSet)
-
 from users.views import UsersViewSet
+from .views import (CategoryViewSet,
+                    CommentViewSet,
+                    GenreViewSet,
+                    ReviewViewSet,
+                    TitleViewSet)
+
 
 router_v1 = SimpleRouter()
 
