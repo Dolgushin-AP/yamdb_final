@@ -5,7 +5,6 @@ from users.views import UsersViewSet, get_jwt_token, user_register
 from .views import (CategoryViewSet, CommentViewSet, GenreViewSet,
                     ReviewViewSet, TitleViewSet)
 
-
 router_v1 = SimpleRouter()
 
 router_v1.register(
