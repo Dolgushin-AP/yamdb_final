@@ -1,24 +1,22 @@
-from rest_framework.decorators import action, api_view, permission_classes
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from rest_framework import status, permissions, viewsets
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 
-
+from api.permissions import IsAdmin
+from .models import User
 from .serializers import (
     RegisterUserSerializer,
     TokenSerializer,
     UserSerializer,
     UserEditSerializer
 )
-from .models import User
-from api.permissions import IsAdmin
-
 
 def send_mail_with_code(user):
     """Отправка письма с кодом подтверждения."""
@@ -115,7 +113,7 @@ class UsersViewSet(viewsets.ModelViewSet):
         if request.method == 'DELETE':
             user.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        elif request.method == 'PATCH':
+        if request.method == 'PATCH':
             serializer = UserSerializer(user, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()

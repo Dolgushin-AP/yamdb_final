@@ -7,14 +7,9 @@ from reviews.models import Category, Comment, Genre, Review, Title
 from .filters import TitleFilter
 from .mixins import CreateDestroyListViewSet
 from .permissions import IsAdminModerAuthorOrReadOnly, ListAllModerAdminOnly
-from .serializers import (
-    AddTitleSerializer,
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleSerializer    
-)
+from .serializers import AddTitleSerializer, CategorySerializer
+from .serializers import CommentSerializer, GenreSerializer, ReviewSerializer
+from .serializers import TitleSerializer
 
 
 class CategoryViewSet(CreateDestroyListViewSet):

@@ -2,7 +2,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
-from reviews.models import Category, Comment, Genre, Title, Review
+from reviews.models import Category, Comment, Genre, Review, Title
 
 
 class CurrentTitleDefault:
