@@ -10,7 +10,6 @@ services:
       - ./.env
   web:
     image: arraton/cicd:v1
-    build: ../api_yamdb/
     restart: always
     volumes:
       - static_value:/app/static/
