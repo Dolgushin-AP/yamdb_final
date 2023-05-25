@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: arraton/cicd:v1
+    image: arraton/cicd:latest
     restart: always
     volumes:
       - static_value:/app/static/
