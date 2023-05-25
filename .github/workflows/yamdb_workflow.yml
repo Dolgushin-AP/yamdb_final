@@ -44,7 +44,7 @@ jobs:
           context: ./api_yamdb
           file: ./api_yamdb/Dockerfile
           push: true
-          tags: arraton/cicd:v1
+          tags: ${{ secrets.DOCKER_USERNAME }}/cicd:latest
 
   deploy:
     runs-on: ubuntu-latest
