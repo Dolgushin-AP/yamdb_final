@@ -59,7 +59,6 @@ docker-compose up
 
 Выполнить команды:
 
-- docker-compose exec web python manage.py makemigrations
 - docker-compose exec web python manage.py migrate
 - docker-compose exec web python manage.py collectstatic --no-input
 ```
@@ -73,3 +72,5 @@ docker-compose exec web python manage.py dumpdata > fixtures.json
 ```
 docker-compose exec web python manage.py createsuperuser
 ```
+### Развёрнутый проект:
+http://84.201.178.118/admin/
