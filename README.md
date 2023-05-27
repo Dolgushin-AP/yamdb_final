@@ -57,10 +57,9 @@ DB_PORT=5432
 docker-compose up
 ```
 
-Выполнить команды:
+Выполнить команду:
 
-- docker-compose exec web python manage.py migrate
-- docker-compose exec web python manage.py collectstatic --no-input
+docker-compose exec web python manage.py migrate
 ```
 
 Создать резервную копию базы данных:
@@ -74,3 +73,5 @@ docker-compose exec web python manage.py createsuperuser
 ```
 ### Развёрнутый проект:
 http://84.201.178.118/admin/
+http://84.201.178.118/redoc/
+http://84.201.178.118/api/v1/titles/
