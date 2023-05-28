@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: arraton/ymdb:v3
+    image: arraton/yamdb:v4
     restart: always
     volumes:
       - static_value:/app/static/
