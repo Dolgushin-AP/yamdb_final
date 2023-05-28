@@ -62,6 +62,7 @@ docker-compose up
 docker-compose exec web python manage.py migrate
 ```
 
+
 Создать резервную копию базы данных:
 ```
 docker-compose exec web python manage.py dumpdata > fixtures.json
