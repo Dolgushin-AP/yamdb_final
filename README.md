@@ -50,18 +50,12 @@ DB_HOST=db
 ```
 ```
 DB_PORT=5432
-
+```
 
 Запустить docker-compose:
 ```
 docker-compose up
 ```
-
-Выполнить команду:
-
-docker-compose exec web python manage.py migrate
-```
-
 
 Создать резервную копию базы данных:
 ```
